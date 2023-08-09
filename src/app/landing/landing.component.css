@@ -1,9 +1,12 @@
-.description{
-    background-color: aliceblue;
-    padding-inline: 30px;
-    border-radius: 10px;
+.services {
+  height: 85vh;
 }
 
+.description {
+  background-color: aliceblue;
+  padding-inline: 30px;
+  border-radius: 10px;
+}
 
 .image {
   width: 500px;
@@ -31,4 +34,42 @@
   color: darkgreen;
 }
 
+.facilities {
+  height: 100vh;
+}
+
+.carousel {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 550px;
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  padding: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.overlay h3 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.carousel:hover .overlay {
+  opacity: 1;
+}
 

@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { OurFacilitiesComponent } from './our-facilities/our-facilities.component';
+import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FooterComponent,
     LandingComponent,
     PageNotFoundComponent,
+    OurServicesComponent,
+    OurFacilitiesComponent,
+    OurDoctorsComponent,
+    
     
   ],
   imports: [
