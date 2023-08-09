@@ -1,0 +1,7 @@
+.footr{
+    display: flex;
+    justify-content: center;
+    padding-top: 23px;
+    height: 80px;
+    font-size: large;
+}
