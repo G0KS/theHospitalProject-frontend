@@ -73,6 +73,7 @@
             src="https://media.istockphoto.com/id/1392605355/photo/senior-woman-in-hospital-bed.jpg?b=1&s=612x612&w=0&k=20&c=CJgSOBj4RINSp1QrJ6xWFK3Kk42YHV2E9CDMgJQhzzc="
             alt="service image"
           />
+          <button class="btn btn-success" routerLink="our-services">Explore our Services ></button>
         </div>
       </div>
     </div>
@@ -111,7 +112,7 @@
             <img
               src="https://assets.hillrom.com/is/image/hillrom/plp-centrella-smart-bed-hero?$featureProductCarouselDesktop$"
               class="d-block w-100"
-              alt="..."
+              alt="Facility carousel image 1"
             />
             <div class="carousel-caption overlay">
               <h3>Dialysis unit</h3>
@@ -126,7 +127,7 @@
             <img
               src="https://kalmers.com/wp-content/uploads/2022/07/2063-1.jpg"
               class="d-block w-100"
-              alt="..."
+              alt="Facility carousel image 2"
             />
             <div class="carousel-caption overlay">
               <h3>CT scan</h3>
@@ -144,7 +145,7 @@
             <img
               src="https://midlandhealthcare.org/wp-content/uploads/2021/06/Physiotherapy.jpg"
               class="d-block w-100"
-              alt="..."
+              alt="Facility carousel image 3"
             />
             <div class="carousel-caption overlay">
               <h3>Physiotherapy Centre</h3>
@@ -177,6 +178,14 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <div class="d-flex justify-content-center">
+        <button
+          class="btn btn-outline-info w-50 mt-3 fs-5 text-uppercase"
+          routerLink="our-facilities"
+        >
+          Explore More of Our Facilities>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -186,7 +195,7 @@
       <h1>Our <span style="color: #0097a7">Doctors</span></h1>
     </div>
     <div class="description">
-      <div class="row align-items-center">
+      <div class="row align-items-center p-5">
         <div class="col-5">
           <p class="fs-5">
             A doctor is responsible for all sides of care of a patient. They
@@ -195,13 +204,45 @@
             performing diagnostic tests, recommending specialists for patients,
             document patient's medical history, and educating patients.
           </p>
+          <div class="d-flex justify-content-center">
+            <button
+              class="btn btn-outline-success fs-5 mt-3"
+              routerLink="our-doctors"
+            >
+              Explore our Doctors>
+            </button>
+          </div>
         </div>
         <div class="col">
-          <img
-            src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2JlY29taW5nLWRvY3Rvci5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH0sInRvRm9ybWF0IjoiYXZpZiJ9fQ=="
-            alt="Doctors image"
-            width="100%"
-          />
+          <div
+            id="carouselExampleSlidesOnly"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner" style="height: 400px">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img
+                  src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2JlY29taW5nLWRvY3Rvci5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH0sInRvRm9ybWF0IjoiYXZpZiJ9fQ=="
+                  class="d-block w-100 h-100 carousel-img"
+                  alt="Doctor carousel image 1"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  src="https://cdn.firstcry.com/education/2022/04/26104239/1686721738.jpg"
+                  class="d-block w-100 carousel-img"
+                  alt="Doctor carousel image 2"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  src="https://www.praktischarzt.de/wp-content/uploads/2023/03/Becoming-a-medical-doctor-or-physician-in-Germany.jpg"
+                  class="d-block w-100 carousel-img"
+                  alt="Doctor carousel image 3"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
