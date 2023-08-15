@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { OurServicesComponent } from './our-services/our-services.component';
 import { OurFacilitiesComponent } from './our-facilities/our-facilities.component';
 import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
+import { QuickHelpComponent } from './quick-help/quick-help.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
     OurServicesComponent,
     OurFacilitiesComponent,
     OurDoctorsComponent,
+    QuickHelpComponent,
     
     
   ],

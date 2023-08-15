@@ -28,12 +28,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: darkgreen;
   background-color: lightgreen;
   height: 70px;
   width: 70px;
   font-size: 30px;
   border-radius: 12px;
-  color: darkgreen;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:hover{
+  background-color: darkgreen;
+  color: lightgreen;
+  cursor:grab;
 }
 
 .facilities {

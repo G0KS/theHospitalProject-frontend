@@ -1,0 +1,40 @@
+* {
+  position: sticky;
+  bottom: 10px;
+  z-index: 999;
+}
+
+.quickHelpToggler {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quickHelp {
+  position: absolute;
+  right: 10px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.quickHelp button {
+  background-color: white;
+  border: 1px black solid;
+  border-radius: 10px;
+  height: 70px;
+  transition: all 0.2s ease;
+}
+
+.quickHelp button:hover {
+  transform: scale(1.05, 1.05);
+}
