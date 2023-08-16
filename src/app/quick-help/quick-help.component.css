@@ -19,22 +19,25 @@
 }
 
 .quickHelp {
+  padding-inline: 10px;
   position: absolute;
   right: 10px;
-  width: 250px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
 
-.quickHelp button {
+.qhBtn {
+  color: green;
   background-color: white;
-  border: 1px black solid;
+  border: none;
+  box-shadow: 2px 4px 50px 1px black;
   border-radius: 10px;
   height: 70px;
   transition: all 0.2s ease;
 }
 
-.quickHelp button:hover {
+.qhBtn:hover {
   transform: scale(1.05, 1.05);
 }

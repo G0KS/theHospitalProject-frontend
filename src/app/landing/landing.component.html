@@ -73,7 +73,9 @@
             src="https://media.istockphoto.com/id/1392605355/photo/senior-woman-in-hospital-bed.jpg?b=1&s=612x612&w=0&k=20&c=CJgSOBj4RINSp1QrJ6xWFK3Kk42YHV2E9CDMgJQhzzc="
             alt="service image"
           />
-          <button class="btn btn-success" routerLink="our-services">Explore our Services ></button>
+          <button class="btn btn-success" routerLink="our-services">
+            Explore our Services >
+          </button>
         </div>
       </div>
     </div>
@@ -247,6 +249,164 @@
       </div>
     </div>
   </div>
-
 </div>
 <app-quick-help></app-quick-help>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="px-3 text-success text-center">
+          Please fill in the form to make a booking
+        </h3>
+        <form [formGroup]="bookingForm" (ngSubmit)="bookNow()">
+          <div class="row p-3">
+            <div class="col-6">
+              <div class="form-floating mb-3">
+                <input
+                  name="fname"
+                  formControlName="fname"
+                  type="text"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Enter your name:"
+                />
+                <label for="floatingInput">Full Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  name="age"
+                  formControlName="age"
+                  type="text"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Enter your age:"
+                />
+                <label for="floatingInput">Age</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-floating mb-3">
+                <input
+                  name="place"
+                  formControlName="place"
+                  type="text"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Enter your Place:"
+                />
+                <label for="floatingInput">Place</label>
+              </div>
+              <select
+                name="gender"
+                formControlName="gender"
+                class="form-select mb-3 p-3"
+                aria-label="Default select example"
+              >
+                <option selected value hidden>Choose a Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+          </div>
+          <label class="ms-3 mb-2 text-uppercase">Choose your Department</label>
+          <div class="d-flex flex-wrap p-3" style="background-color: #31eaff79;">
+            <div class="form-check me-4">
+              <input
+                name="department"
+                formControlName="department"
+                class="form-check-input"
+                type="radio"
+                id="flexRadioDefault1"
+                value="Cardiology"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Cardiology
+              </label>
+            </div>
+            <div class="form-check me-4">
+              <input
+                class="form-check-input dark"
+                type="radio"
+                name="department"
+                formControlName="department"
+                id="flexRadioDefault2"
+                value="Gynecology"
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Gynecology
+              </label>
+            </div>
+            <div class="form-check me-4">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="department"
+                formControlName="department"
+                id="flexRadioDefault3"
+                value="Orthopeadic"
+              />
+              <label class="form-check-label" for="flexRadioDefault3">
+                Orthopeadic
+              </label>
+            </div>
+            <div class="form-check me-4">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="department"
+                formControlName="department"
+                id="flexRadioDefault4"
+                value="General Medicine"
+              />
+              <label class="form-check-label" for="flexRadioDefault4">
+                General Medicine
+              </label>
+            </div>
+          </div>
+          <div class="p-3">
+            <select
+              name="doctor"
+              formControlName="doctor"
+              class="form-select p-3"
+              aria-label="Default select example"
+            >
+              <option selected value hidden>Select Doctor</option>
+              <option *ngFor="let doc of doctorsList" [value]="doc">
+                {{ doc }}
+              </option>
+            </select>
+          </div>
+          <div class="d-flex justify-content-center m-4">
+            <button type="submit" class="btn btn-outline-success fs-5">
+              Book Now
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-body text-center">
+        <h3>Booking Confirmed</h3>
+        <h2>Your Token Number is:</h2>
+        <h1>10</h1>
+      </div>
+    </div>
+  </div>
+</div>

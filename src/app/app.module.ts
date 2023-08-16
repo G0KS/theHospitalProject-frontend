@@ -11,6 +11,8 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { OurFacilitiesComponent } from './our-facilities/our-facilities.component';
 import { OurDoctorsComponent } from './our-doctors/our-doctors.component';
 import { QuickHelpComponent } from './quick-help/quick-help.component';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { QuickHelpComponent } from './quick-help/quick-help.component';
     OurDoctorsComponent,
     QuickHelpComponent,
     
-    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
