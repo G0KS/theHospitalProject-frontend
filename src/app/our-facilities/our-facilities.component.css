@@ -1,0 +1,54 @@
+.facilities {
+  height: 100vh;
+}
+
+.carousel {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 100%;
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  padding: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.overlay h3 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.carousel:hover .overlay {
+  opacity: 1;
+}
+
+.image {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px;
+  outline: 7px solid white;
+  box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.5);
+}

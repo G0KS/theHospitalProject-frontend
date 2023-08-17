@@ -12,4 +12,8 @@ export class ApiService {
   getAllDoctors() {
     return this.http.get(`${this.base_url}/get-all-doctors`);
   }
+
+  addPatient(body:any){
+    return this.http.post(`${this.base_url}/add-patient`,body)
+  }
 }

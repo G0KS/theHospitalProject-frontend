@@ -1,13 +1,3 @@
-.services {
-  height: 85vh;
-}
-
-.description {
-  background-color: aliceblue;
-  padding-inline: 30px;
-  border-radius: 10px;
-}
-
 .image {
   width: 500px;
   display: flex;
@@ -24,29 +14,6 @@
   box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.5);
 }
 
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: darkgreen;
-  background-color: lightgreen;
-  height: 70px;
-  width: 70px;
-  font-size: 30px;
-  border-radius: 12px;
-  transition: all 0.3s ease-in-out;
-}
-
-.icon:hover{
-  background-color: darkgreen;
-  color: lightgreen;
-  cursor:grab;
-}
-
-.facilities {
-  height: 100vh;
-}
-
 .carousel {
   border-radius: 30px;
   overflow: hidden;
@@ -57,27 +24,3 @@
   position: relative;
 }
 
-.overlay {
-  height: 100%;
-  width: 100%;
-  padding: 200px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: all 0.3s;
-}
-
-.overlay h3 {
-  font-size: 40px;
-  text-transform: uppercase;
-}
-
-.carousel:hover .overlay {
-  opacity: 1;
-}

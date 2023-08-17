@@ -9,6 +9,7 @@ import { ApiService } from '../services/api.service';
 })
 export class LandingComponent implements OnInit {
   doctorsList: any = [];
+  patientToken: any = 0;
 
   bookingForm = this.fb.group({
     fname: ['', [Validators.required, Validators.pattern('[a-zA-z ]*')]],
@@ -35,13 +36,34 @@ export class LandingComponent implements OnInit {
   }
 
   bookNow() {
-    let fname = this.bookingForm.value.fname;
+    let pname = this.bookingForm.value.fname;
     let age = this.bookingForm.value.age;
     let place = this.bookingForm.value.place;
     let gender = this.bookingForm.value.gender;
     let department = this.bookingForm.value.department;
     let doctor = this.bookingForm.value.doctor;
 
-    console.log(fname, age, place, gender, department,doctor);
+    localStorage.setItem('PatientToken', this.patientToken+1);
+    let id = localStorage.getItem('PatientToken');
+    console.log(id);
+
+    // const body = {
+    //   id:10,
+    //   pname,
+    //   age,
+    //   place,
+    //   gender,
+    //   department,
+    //   doctor,
+    // };
+
+    // this.api.addPatient(body).subscribe({
+    //   next: (res: any) => {
+    //     console.log(res);
+    //   },
+    //   error: (err: any) => {
+    //     console.log(err);
+    //   },
+    // });
   }
 }
