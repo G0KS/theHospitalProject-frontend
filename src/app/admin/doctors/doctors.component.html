@@ -1,7 +1,8 @@
 <div class="container">
   <div class="title">
     <h1>Our <span style="color: #0097a7">Doctors</span></h1>
-  </div>
+</div>
+<button class="btn btn-info" routerLink="/admin/dashboard">Go Back</button>
   <div class="d-flex flex-wrap">
     <div
       *ngFor="let doctor of allDoctors"
@@ -10,8 +11,12 @@
     >
       <img [src]="doctor.image" class="card-img-top" alt="..." />
       <div class="card-body text-center">
-        <p class="card-text text-uppercase">{{ doctor.name }}</p>
+        <h4 class="card-text text-uppercase text-success">Dr. {{ doctor.name }}</h4>
+        <p class="card-text">Age : {{ doctor.age }}</p>
         <p class="card-text">Department : {{ doctor.department }}</p>
+        <button (click)="delete(doctor.id)" class="btn btn-danger">
+          <i class="fa-solid fa-trash"></i>
+        </button>
       </div>
     </div>
   </div>

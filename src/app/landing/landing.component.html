@@ -3,9 +3,9 @@
 
   <!-- Services Section -->
   <app-our-services></app-our-services>
-  
+
   <!-- Facilities Section -->
- <app-our-facilities></app-our-facilities>
+  <app-our-facilities></app-our-facilities>
 
   <!-- Landing bottom -->
   <div class="landingBottom">
@@ -88,11 +88,11 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body">
+      <div *ngIf="!isBooked" class="modal-body">
         <h3 class="px-3 text-success text-center">
           Please fill in the form to make a booking
         </h3>
-        <form [formGroup]="bookingForm" (ngSubmit)="bookNow()" style="background-color: #31eaff79;" class="rounded">
+        <form [formGroup]="bookingForm" (ngSubmit)="bookNow()" class="rounded">
           <div class="row p-3">
             <div class="col-6">
               <div class="form-floating mb-3">
@@ -211,17 +211,40 @@
               </option>
             </select>
           </div>
-          <div class="d-flex justify-content-center m-4">
+          <div class="d-flex justify-content-center p-3">
             <button type="submit" class="btn btn-outline-success fs-5">
               Book Now
             </button>
           </div>
         </form>
       </div>
-      <div class="modal-body text-center">
+      <div *ngIf="isBooked" class="modal-body text-center">
         <h3>Booking Confirmed</h3>
         <h2>Your Token Number is:</h2>
-        <h1>10</h1>
+        <h1>{{ patientData.id }}</h1>
+        <p>Booking Details</p>
+        <table class="table rounded p-3">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Place</th>
+              <th>Department</th>
+              <th>Doctor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>{{ patientData.pname }}</th>
+              <th>{{ patientData.age }}</th>
+              <th>{{ patientData.gender }}</th>
+              <th>{{ patientData.place }}</th>
+              <th>{{ patientData.department }}</th>
+              <th>{{ patientData.doctor }}</th>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

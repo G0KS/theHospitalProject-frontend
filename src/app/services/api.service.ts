@@ -9,11 +9,22 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
+  addDoctor(body:any){
+    return this.http.post(`${this.base_url}/add-doctor`,body)
+  }
   getAllDoctors() {
     return this.http.get(`${this.base_url}/get-all-doctors`);
   }
 
-  addPatient(body:any){
-    return this.http.post(`${this.base_url}/add-patient`,body)
+  getAllPatients() {
+    return this.http.get(`${this.base_url}/get-all-patients`);
+  }
+
+  addPatient(body: any) {
+    return this.http.post(`${this.base_url}/add-patient`, body);
+  }
+
+  deleteDoctor(id:any){
+    return this.http.delete(`${this.base_url}/delete-doctor/${id}`)
   }
 }

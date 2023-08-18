@@ -9,7 +9,8 @@ import { ApiService } from '../services/api.service';
 })
 export class LandingComponent implements OnInit {
   doctorsList: any = [];
-  patientToken: any = 0;
+  isBooked: boolean = false;
+  patientData: any = {};
 
   bookingForm = this.fb.group({
     fname: ['', [Validators.required, Validators.pattern('[a-zA-z ]*')]],
@@ -43,27 +44,33 @@ export class LandingComponent implements OnInit {
     let department = this.bookingForm.value.department;
     let doctor = this.bookingForm.value.doctor;
 
-    localStorage.setItem('PatientToken', this.patientToken+1);
-    let id = localStorage.getItem('PatientToken');
-    console.log(id);
-
-    // const body = {
-    //   id:10,
-    //   pname,
-    //   age,
-    //   place,
-    //   gender,
-    //   department,
-    //   doctor,
-    // };
-
-    // this.api.addPatient(body).subscribe({
-    //   next: (res: any) => {
-    //     console.log(res);
-    //   },
-    //   error: (err: any) => {
-    //     console.log(err);
-    //   },
-    // });
+    this.api.getAllPatients().subscribe({
+      next: (res: any) => {
+        let id = res.length + 1;
+        let body = {
+          id,
+          pname,
+          age,
+          place,
+          gender,
+          department,
+          doctor,
+        };
+        this.api.addPatient(body).subscribe({
+          next: (res: any) => {
+            console.log(res);
+            this.isBooked = true;
+            this.patientData = body;
+            console.log(this.patientData);
+          },
+          error: (err: any) => {
+            console.log(err);
+          },
+        });
+      },
+      error: (err: any) => {
+        console.log(err);
+      },
+    });
   }
 }

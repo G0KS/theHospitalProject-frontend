@@ -1,0 +1,12 @@
+.cardButton {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+}
+
+.adminCard{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

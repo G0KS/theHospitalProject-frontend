@@ -1,1 +1,161 @@
-<p>dashboard works!</p>
+<div class="container">
+  <div class="title">
+    <h1 class="text-center m-5">Welcome {{ loggedUser }}</h1>
+</div>
+<div class="d-flex justify-content-center mb-3"><button class="btn btn-danger" (click)="logout()">Logout</button></div>
+  <div class="adminCard">
+    <div class="card" style="width: 350px">
+      <img
+        src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg"
+        class="card-img-top"
+        alt="Doctor image"
+      />
+      <div class="card-body">
+        <h2 class="card-title text-center text-danger">Doctors</h2>
+      </div>
+      <div class="cardButton">
+        <button class="btn btn-primary" routerLink="/admin/doctors">
+          View Doctors
+        </button>
+        <button
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          Add Doctors
+        </button>
+      </div>
+    </div>
+
+    <div class="card" style="width: 350px">
+      <img
+        src="https://img.freepik.com/premium-vector/patient-is-hospital-bed_118167-6250.jpg"
+        class="card-img-top"
+        alt="Patient image"
+      />
+      <div class="card-body">
+        <h2 class="card-title text-center text-danger">Patients</h2>
+      </div>
+      <div class="cardButton">
+        <button class="btn btn-success" routerLink="/admin/patients">
+          View Patients
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Doctor</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="addDoctorForm" (ngSubmit)="addDoctor()">
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingID"
+              placeholder="name@example.com"
+              name="id"
+              formControlName="id"
+            />
+            <label for="floatingID">ID</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingName"
+              placeholder="name@example.com"
+              name="name"
+              formControlName="name"
+            />
+            <label for="floatingName">Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingImg"
+              placeholder="name@example.com"
+              name="image"
+              formControlName="image"
+            />
+            <label for="floatingImg">Image Url</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingGender"
+              placeholder="name@example.com"
+              name="gender"
+              formControlName="gender"
+            />
+            <label for="floatingGender">Gender</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingAge"
+              placeholder="name@example.com"
+              name="age"
+              formControlName="age"
+            />
+            <label for="floatingAge">Age</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingDepartment"
+              placeholder="name@example.com"
+              name="department"
+              formControlName="department"
+            />
+            <label for="floatingDepartment">Department</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingEmail"
+              placeholder="name@example.com"
+              name="email"
+              formControlName="email"
+            />
+            <label for="floatingEmail">Email</label>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Add Doctor
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

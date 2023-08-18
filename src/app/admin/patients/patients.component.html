@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="title"><h1>Patients</h1></div>
+  <button class="btn btn-primary" routerLink="/admin/dashboard">Go Back</button>
+  <table class="table rounded shadow border">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Doctor</th>
+        <th>Department</th>
+        <th>Place</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of allPatients">
+        <td>{{ patient.pname }}</td>
+        <td>{{ patient.age }}</td>
+        <td>{{ patient.gender }}</td>
+        <td>{{ patient.doctor }}</td>
+        <td>{{ patient.department }}</td>
+        <td>{{ patient.place }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
